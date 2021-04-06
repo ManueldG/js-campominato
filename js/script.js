@@ -15,4 +15,30 @@ con difficoltà 2 => tra 1 e 50
 Consiglio:
 Proviamo prima con pochi numeri, inserire 86 numeri ogni volta potrebbe essere un po’ scocciante
 */
+var tabella = [];
+var min = 1;
+var max = 100;
+var elem = 16; 
+var scelta;
+var tentativi = 0;
+
+
+theFiller(tabella,elem);
+console.log(tabella);
+do{
+    scelta = prompt("inserisci un numero tra 1 e 100");
+    if (scelta > 100 || scelta <1) 
+        console.log("scelta non valida");
+    else
+        {
+            tentativi++;
+
+        }
+
+}
+while(tabella.includes(scelta))
+
+
+
+    
 
