@@ -20,23 +20,31 @@ var min = 1;
 var max = 100;
 var elem = 16; 
 var scelta;
+var scelteEffettuate = [];
 var tentativi = 0;
+var maxTentativi = 3;
 
 
 theFiller(tabella,elem);
 console.log(tabella);
 do{
-    scelta = prompt("inserisci un numero tra 1 e 100");
-    if (scelta > 100 || scelta <1) 
+    scelta = parseInt(prompt("inserisci un numero tra 1 e 100 tentativo n" + tentativi));
+    if ((scelta > 100) || (scelta <1)||(scelteEffettuate.includes(scelta))) 
         console.log("scelta non valida");
     else
         {
             tentativi++;
-
+            console.log(tentativi);
         }
+    scelteEffettuate.push(scelta); 
 
 }
-while(tabella.includes(scelta))
+while((!tabella.includes(scelta))&&(tentativi<maxTentativi));
+
+if (tentativi=maxTentativi)
+    console.log("hai vinto !!!");
+else 
+    console.log("BOOOM!!! Hai perso");
 
 
 
