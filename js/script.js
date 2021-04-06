@@ -42,8 +42,8 @@ theFiller(tabella,elem,min,max); // popola la matrice
 console.log(tabella);
 
 do{
-    scelta = parseInt(prompt("inserisci un numero tra 1 e 100 tentativo n" + tentativi));
-    if ((scelta > 100) || (scelta <1)||(scelteEffettuate.includes(scelta))) 
+    scelta = parseInt(prompt("inserisci un numero tra 1 e "+max+" tentativo n " + tentativi + " / "+maxTentativi));
+    if ((scelta > max) || (scelta <min)||(scelteEffettuate.includes(scelta))) 
         console.log("scelta non valida");
     else
         {
