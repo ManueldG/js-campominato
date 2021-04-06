@@ -30,7 +30,7 @@ function isExist(array,value){
  * @param {number} val numero di elementi random da inserire   
  * @returns {number} ritorna la matrice popolata
  */
-function theFiller (matrix,val){
+function theFiller (matrix,val,min,max){
     while (matrix.length < val){
         var rand = random(min,max);
         if (!matrix.includes(rand)) 

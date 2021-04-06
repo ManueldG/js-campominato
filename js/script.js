@@ -25,8 +25,22 @@ var tentativi = 0;
 var maxTentativi = 3;
 
 
-theFiller(tabella,elem);
+
+var livello= parseInt(prompt("scegli il livello di difficoltà (0/1/2)"));
+switch (livello){
+    case 0 : max=100; 
+    break;
+    case 1 : max = 80;
+    break;
+    case 2 : max = 50;
+    break;
+    default : console.log("scelta non riconosciuta sarà impostato il livello massimo");
+            max = 50;
+}
+
+theFiller(tabella,elem,min,max); // popola la matrice
 console.log(tabella);
+
 do{
     scelta = parseInt(prompt("inserisci un numero tra 1 e 100 tentativo n" + tentativi));
     if ((scelta > 100) || (scelta <1)||(scelteEffettuate.includes(scelta))) 
